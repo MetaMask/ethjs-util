@@ -1,28 +1,4 @@
 {
-  "_from": "ethjs-util",
-  "_id": "ethjs-util@0.1.4",
-  "_inBundle": false,
-  "_integrity": "sha1-HItoeSV0RO9NPz+7rC3tEs2ZfZM=",
-  "_location": "/ethjs-util",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "ethjs-util",
-    "name": "ethjs-util",
-    "escapedName": "ethjs-util",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/ethjs-util/-/ethjs-util-0.1.4.tgz",
-  "_shasum": "1c8b6879257444ef4d3f3fbbac2ded12cd997d93",
-  "_spec": "ethjs-util",
-  "_where": "/home/nick",
   "authors": [
     "Nick Dodson <nick.dodson@consensys.net>"
   ],
@@ -245,5 +221,5 @@
     "test:clean": "rimraf ./coverage",
     "test:lib": "mocha ./lib/tests/**/*.js -R spec --timeout 2000000"
   },
-  "version": "0.1.4"
+  "version": "0.1.5"
 }

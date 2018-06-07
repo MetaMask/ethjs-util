@@ -28,7 +28,7 @@ function padToEven(value) {
 function intToHex(i) {
   var hex = i.toString(16); // eslint-disable-line
 
-  return `0x${hex}`;
+  return `0x${hex}`; // no additional padding now
 }
 
 /**
