@@ -18,11 +18,6 @@
     alt="NPM version" />
   </a>
 
-  <!-- Test Coverage -->
-  <a href="https://coveralls.io/r/ethjs/ethjs-util">
-    <img src="https://coveralls.io/repos/github/ethjs/ethjs-util/badge.svg" alt="Test Coverage" />
-  </a>
-
   <!-- Javascript Style -->
   <a href="http://airbnb.io/javascript/">
     <img src="https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg" alt="js-airbnb-style" />
