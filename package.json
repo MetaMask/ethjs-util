@@ -69,7 +69,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/ethjs/ethjs-util/issues"
+    "url": "https://github.com/MetaMask/ethjs-util/issues"
   },
   "bundleDependencies": false,
   "contributors": [
@@ -177,7 +177,7 @@
     "lib",
     "src"
   ],
-  "homepage": "https://github.com/ethjs/ethjs-util#readme",
+  "homepage": "https://github.com/MetaMask/ethjs-util#readme",
   "keywords": [
     "ethereum",
     "rpc",
@@ -192,11 +192,15 @@
     "lint:eslint": "*.js"
   },
   "main": "lib/index.js",
-  "name": "ethjs-util",
+  "name": "@metamask/ethjs-util",
   "pre-commit": "build",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ethjs/ethjs-util.git"
+    "url": "https://github.com/MetaMask/ethjs-util.git"
   },
   "scripts": {
     "build": "npm run build:commonjs && npm run test:lib && npm run build:umd && npm run build:umd:min",
