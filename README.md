@@ -31,7 +31,7 @@ A simple set of Ethereum JS utilities such as `toBuffer` and `isHexPrefixed`.
 ## Install
 
 ```
-npm install --save ethjs-util
+npm install --save @metamask/ethjs-util
 ```
 
 ## Usage
@@ -95,7 +95,7 @@ There is always a lot of work to do, and will have many rules to maintain. So pl
 
 Please consult our [Code of Conduct](CODE_OF_CONDUCT.md) docs before helping out.
 
-We communicate via [issues](https://github.com/ethjs/ethjs-util/issues) and [pull requests](https://github.com/ethjs/ethjs-util/pulls).
+We communicate via [issues](https://github.com/MetaMask/ethjs-util/issues) and [pull requests](https://github.com/MetaMask/ethjs-util/pulls).
 
 ## Important documents
 

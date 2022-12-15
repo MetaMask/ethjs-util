@@ -5,7 +5,7 @@ All information for developers using `ethjs-util` should consult this document.
 ## Install
 
 ```
-npm install --save ethjs-util
+npm install --save @metamask/ethjs-util
 ```
 
 ## Usage

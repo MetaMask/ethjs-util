@@ -5,13 +5,13 @@ All information regarding contributing to and progressing `ethjs-util` module ca
 ## Install
 
 ```
-npm install --save ethjs-util
+npm install --save @metamask/ethjs-util
 ```
 
 ## Install from Source
 
 ```
-git clone http://github.com/ethjs/ethjs-util
+git clone http://github.com/MetaMask/ethjs-util
 npm install
 ```
 
