@@ -192,7 +192,7 @@
     "lint:eslint": "*.js"
   },
   "main": "lib/index.js",
-  "name": "ethjs-util",
+  "name": "@metamask/ethjs-util",
   "pre-commit": "build",
   "repository": {
     "type": "git",
