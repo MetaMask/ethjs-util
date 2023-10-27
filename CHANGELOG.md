@@ -1,41 +1,90 @@
-# 0.1.3 -- less dependencies
+# Changelog
+All notable changes to this project will be documented in this file.
 
-1. Less dependencies
-2. Smaller build size
-3. More docs
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-# 0.1.2 -- config fixes
+## [Unreleased]
 
-1. webpack config updates
-2. build config updates
+## [0.1.6]
+### Added
+- added docs
+- new builds
 
-# 0.1.1 -- less dependencies
+### Removed
+- removed addHexPrefix function
 
-1. Less dependencies, same functionality
-2. More tests
-3. More docs
+### Fixed
+- fix for intToBuffer method
 
-# 0.0.5 -- more config
+## [0.1.5]
+### Added
+- added addHexPrefix function
 
-1. Module configuration for es5, webpack and dist builds
+### Changed
+- intToHex - stopped padding to even.
 
-# 0.0.4 -- remove unused deps
+## [0.1.4]
+### Fixed
+- fix for node version 5
 
-1. Removed one unused dep
+## [0.1.3]
+### Added
+- More docs
 
-# 0.0.3 -- added `some` property to arrayContainsArray
+### Changed
+- Less dependencies
+- Smaller build size
 
-1. added `some` property to arrayContainsArray, allows some array in another
+## [0.1.2]
+### Changed
+- webpack config updates
+- build config updates
 
-# 0.0.2 -- added isHexString and getKeys
+## [0.1.1]
+### Added
+- More tests
+- More docs
 
-1. added `isHexString` method
-2. added `getKeys` method util
+### Changed
+- Less dependencies, same functionality
 
-# 0.0.1 -- ethjs-util
 
-1. Basic testing
-2. Basic docs
-3. License
-4. linting
-5. basic exports
+## [0.0.5]
+### Changed
+- Module configuration for es5, webpack and dist builds
+
+## [0.0.4]
+### Removed
+- Removed one unused dep
+
+## [0.0.3]
+### Added
+- added `some` property to arrayContainsArray, allows some array in another
+
+## [0.0.2]
+### Added
+- added `isHexString` method
+- added `getKeys` method util
+
+## [0.0.1]
+### Changed
+- ethjs-util
+  - Basic testing
+  - Basic docs
+  - License
+  - linting
+  - basic exports
+
+[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...HEAD
+[0.1.6]: https://github.com/MetaMask/ethjs-util/compare/v0.1.5...v0.1.6
+[0.1.5]: https://github.com/MetaMask/ethjs-util/compare/v0.1.4...v0.1.5
+[0.1.4]: https://github.com/MetaMask/ethjs-util/compare/v0.1.3...v0.1.4
+[0.1.3]: https://github.com/MetaMask/ethjs-util/compare/v0.1.2...v0.1.3
+[0.1.2]: https://github.com/MetaMask/ethjs-util/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/MetaMask/ethjs-util/compare/v0.0.5...v0.1.1
+[0.0.5]: https://github.com/MetaMask/ethjs-util/compare/v0.0.4...v0.0.5
+[0.0.4]: https://github.com/MetaMask/ethjs-util/compare/v0.0.3...v0.0.4
+[0.0.3]: https://github.com/MetaMask/ethjs-util/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/MetaMask/ethjs-util/compare/v0.0.1...v0.0.2
+[0.0.1]: https://github.com/MetaMask/ethjs-util/releases/tag/v0.0.1
