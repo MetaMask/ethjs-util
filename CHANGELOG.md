@@ -7,20 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.2.0]
-### Uncategorized
-- format changelog; add missing entries
-- add nvmrc
-- add publishConfig to package.json
-- update package name and repo url
-- move package to @metamask namespace
-- devDeps: cross-env@1.0.7->6.0.3
-- deprecate nodejs < v8.17, npm < v6
-- devDeps: remove legacy check-es3-syntax-cli
-- remove coveralls,travis. npm [test-travis,coveralls]->test:coverage
-- update dist
-- update package-lock.json
-- ci: Remove Travis integration
-- ci: Add GitHub Actions workflows
+### Changed
+- **BREAKING**: Rename package from `ethjs-util` to `@metamask/ethjs-util`
+- **BREAKING**: Deprecate nodejs < v8.17, npm < v6
+- Update dist
 
 ## [0.1.6]
 ### Added
