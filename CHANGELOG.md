@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0]
+### Uncategorized
+- format changelog; add missing entries
+- add nvmrc
+- add publishConfig to package.json
+- update package name and repo url
+- move package to @metamask namespace
+- devDeps: cross-env@1.0.7->6.0.3
+- deprecate nodejs < v8.17, npm < v6
+- devDeps: remove legacy check-es3-syntax-cli
+- remove coveralls,travis. npm [test-travis,coveralls]->test:coverage
+- update dist
+- update package-lock.json
+- ci: Remove Travis integration
+- ci: Add GitHub Actions workflows
+
 ## [0.1.6]
 ### Added
 - added docs
@@ -76,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - linting
   - basic exports
 
-[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/MetaMask/ethjs-util/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/MetaMask/ethjs-util/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/MetaMask/ethjs-util/compare/v0.1.3...v0.1.4
