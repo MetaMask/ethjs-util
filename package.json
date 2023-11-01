@@ -115,7 +115,7 @@
     "babel-loader": "^8.0.0",
     "bignumber.js": "^9.1.2",
     "bn.js": "^5.2.1",
-    "chai": "3.5.0",
+    "chai": "^4.3.10",
     "cross-env": "6.0.3",
     "eslint": "^5.4.0",
     "eslint-config-airbnb": "17.1.1",
