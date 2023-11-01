@@ -144,6 +144,16 @@
       "mocha": true,
       "es6": true
     },
+    "overrides": [
+      {
+        "files": [
+          "dist/**.js"
+        ],
+        "rules": {
+          "indent": 0
+        }
+      }
+    ],
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module"
