@@ -123,7 +123,6 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "eventsource-polyfill": "0.9.6",
     "istanbul": "0.4.5",
     "json-loader": "^0.5.7",
     "lint-staged": "1.0.1",
