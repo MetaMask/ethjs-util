@@ -20,7 +20,7 @@ var config = {                    // eslint-disable-line
   },
   devtool: 'cheap-module-source-map',
   output: {
-    path: path.resolve(path.join(__dirname, 'dist')),
+    path: path.resolve(path.join(__dirname, '../../dist')),
     filename: filename + '.js',       // eslint-disable-line
     library: library,                 // eslint-disable-line
     libraryTarget: 'umd',
