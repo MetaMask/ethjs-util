@@ -1,4 +1,5 @@
-var webpack = require('webpack'); // eslint-disable-line
+const path = require('path');
+const webpack = require('webpack');
 
 var env = process.env.NODE_ENV;   // eslint-disable-line
 var filename = 'ethjs-util';      // eslint-disable-line
@@ -13,13 +14,13 @@ var config = {                    // eslint-disable-line
       },
       {
         test: /\.json$/,
-        loader: 'json',
+        loader: ['json-loader'],
       },
     ],
   },
   devtool: 'cheap-module-source-map',
   output: {
-    path: 'dist',
+    path: path.resolve(path.join(__dirname, 'dist')),
     filename: filename + '.js',       // eslint-disable-line
     library: library,                 // eslint-disable-line
     libraryTarget: 'umd',
@@ -52,7 +53,6 @@ if (env === 'production') {
       screw_ie8: false,
     },
   }));
-  config.plugins.push(new webpack.optimize.DedupePlugin());
 }
 
 module.exports = config;
