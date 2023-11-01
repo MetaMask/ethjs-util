@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0]
+### Changed
+- **BREAKING**: Rename package from `ethjs-util` to `@metamask/ethjs-util`
+- **BREAKING**: Deprecate nodejs < v8.17, npm < v6
+- Update dist
+
 ## [0.1.6]
 ### Added
 - added docs
@@ -76,7 +82,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - linting
   - basic exports
 
-[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/MetaMask/ethjs-util/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/MetaMask/ethjs-util/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/MetaMask/ethjs-util/compare/v0.1.3...v0.1.4
