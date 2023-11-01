@@ -39,7 +39,7 @@ function intToHex(i) {
 function intToBuffer(i) {
   const hex = intToHex(i);
 
-  return new Buffer(padToEven(hex.slice(2)), 'hex');
+  return Buffer.from(padToEven(hex.slice(2)), 'hex');
 }
 
 /**
@@ -79,7 +79,7 @@ function arrayContainsArray(superset, subset, some) {
  * @returns {String} ascii string representation of hex value
  */
 function toUtf8(hex) {
-  const bufferValue = new Buffer(padToEven(stripHexPrefix(hex).replace(/^0+|0+$/g, '')), 'hex');
+  const bufferValue = Buffer.from(padToEven(stripHexPrefix(hex).replace(/^0+|0+$/g, '')), 'hex');
 
   return bufferValue.toString('utf8');
 }
@@ -116,7 +116,7 @@ function toAscii(hex) {
  * @returns {String} hex representation of input string
  */
 function fromUtf8(stringValue) {
-  const str = new Buffer(stringValue, 'utf8');
+  const str = Buffer.from(stringValue, 'utf8');
 
   return `0x${padToEven(str.toString('hex')).replace(/^0+|0+$/g, '')}`;
 }

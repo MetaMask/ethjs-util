@@ -117,7 +117,7 @@ describe('check all exports', () => {
 
   it('should padToEven throw as expected string got new Buffer()', () => {
     try {
-      util.padToEven(new Buffer());
+      util.padToEven(Buffer.alloc());
     } catch (error) {
       assert.equal(typeof error, 'object');
     }
