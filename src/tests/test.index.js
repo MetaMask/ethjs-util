@@ -1,23 +1,24 @@
-const util = require('../index.js');
+/* eslint-disable import/no-extraneous-dependencies */
 const assert = require('chai').assert;
 const BN = require('bn.js');
+const util = require('../index.js');
 
 describe('check all exports', () => {
   it('should have all exports available', () => {
     const expected = ['arrayContainsArray',
-    'toBuffer',
-    'intToBuffer',
-    'getBinarySize',
-    'stripHexPrefix',
-    'isHexPrefixed',
-    'padToEven',
-    'intToHex',
-    'fromAscii',
-    'fromUtf8',
-    'toAscii',
-    'getKeys',
-    'isHexString',
-    'toUtf8'];
+      'toBuffer',
+      'intToBuffer',
+      'getBinarySize',
+      'stripHexPrefix',
+      'isHexPrefixed',
+      'padToEven',
+      'intToHex',
+      'fromAscii',
+      'fromUtf8',
+      'toAscii',
+      'getKeys',
+      'isHexString',
+      'toUtf8'];
 
     Object.keys(util).forEach((utilKey) => {
       assert.equal(expected.includes(utilKey), true, utilKey);
@@ -330,9 +331,9 @@ describe('check all exports', () => {
   });
 
   const toUtf8Tests = [
-      { value: '0x6d79537472696e67', expected: 'myString' },
-      { value: '0x6d79537472696e6700', expected: 'myString' },
-      { value: '0x65787065637465642076616c7565000000000000000000000000000000000000', expected: 'expected value' },
+    { value: '0x6d79537472696e67', expected: 'myString' },
+    { value: '0x6d79537472696e6700', expected: 'myString' },
+    { value: '0x65787065637465642076616c7565000000000000000000000000000000000000', expected: 'expected value' },
   ];
 
   describe('toUtf8', () => {

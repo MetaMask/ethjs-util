@@ -159,7 +159,7 @@ function getKeys(params, key, allowEmpty) {
     var value = params[i][key]; // eslint-disable-line
     if (allowEmpty && !value) {
       value = '';
-    } else if (typeof(value) !== 'string') {
+    } else if (typeof (value) !== 'string') {
       throw new Error('invalid abi');
     }
     result.push(value);
@@ -177,7 +177,7 @@ function getKeys(params, key, allowEmpty) {
  * @returns {Boolean} output the string is a hex string
  */
 function isHexString(value, length) {
-  if (typeof(value) !== 'string' || !value.match(/^0x[0-9A-Fa-f]*$/)) {
+  if (typeof (value) !== 'string' || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
 
