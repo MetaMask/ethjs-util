@@ -1,26 +1,10 @@
 ## ethjs-util
 
 <div>
-  <!-- Dependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-util">
-    <img src="https://david-dm.org/ethjs/ethjs-util.svg"
-    alt="Dependency Status" />
-  </a>
-
-  <!-- devDependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-util#info=devDependencies">
-    <img src="https://david-dm.org/ethjs/ethjs-util/dev-status.svg" alt="devDependency Status" />
-  </a>
-
   <!-- NPM Version -->
   <a href="https://www.npmjs.org/package/ethjs-util">
     <img src="http://img.shields.io/npm/v/ethjs-util.svg"
     alt="NPM version" />
-  </a>
-
-  <!-- Javascript Style -->
-  <a href="http://airbnb.io/javascript/">
-    <img src="https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg" alt="js-airbnb-style" />
   </a>
 </div>
 
@@ -37,7 +21,7 @@ npm install --save @metamask/ethjs-util
 ## Usage
 
 ```js
-const util = require('ethjs-util');
+const util = require('@metamask/ethjs-util');
 
 const value = util.intToBuffer(38272);
 
@@ -101,7 +85,7 @@ We communicate via [issues](https://github.com/MetaMask/ethjs-util/issues) and [
 
 - [Changelog](CHANGELOG.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
-- [License](https://raw.githubusercontent.com/ethjs/ethjs-util/master/LICENSE)
+- [License](https://raw.githubusercontent.com/MetaMask/ethjs-util/master/LICENSE)
 
 ## Licence
 
