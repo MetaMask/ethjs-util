@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0]
+### Uncategorized
+- Upgrade and unpin devDependencies ([#16](https://github.com/MetaMask/ethjs-util/pull/16))
+- lint:fix
+- update dist
+- eslint: ignore dist
+- disable new style-related eslint rules
+- align eslint peer packages versions
+- devDeps: eslint@2.10.1->^5.4.0
+- add peerDependency @babel/runtime@^7.0.0
+- npm dedupe; npm audit fix
+- devDeps: babel-*@6 -> @babel/*@^7
+- replace Buffer() with Buffer.from / Buffer.alloc ([#15](https://github.com/MetaMask/ethjs-util/pull/15))
+- devDeps: webpack@2->3 ([#13](https://github.com/MetaMask/ethjs-util/pull/13))
+
 ## [0.2.0]
 ### Changed
 - **BREAKING**: Rename package from `ethjs-util` to `@metamask/ethjs-util`
@@ -82,7 +97,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - linting
   - basic exports
 
-[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/MetaMask/ethjs-util/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/MetaMask/ethjs-util/compare/v0.1.4...v0.1.5
