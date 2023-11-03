@@ -11,7 +11,7 @@ npm install --save @metamask/ethjs-util
 ## Usage
 
 ```js
-const util = require('ethjs-util');
+const util = require('@metamask/ethjs-util');
 
 const value = util.intToBuffer(38272);
 
@@ -61,25 +61,6 @@ Note, even though `ethjs` should have transformed and polyfilled most of the req
 
 Use a polyfill service such as `Polyfill.io` to ensure complete cross-browser support:
 https://polyfill.io/
-
-## Latest Webpack Figures
-
-```
-Hash: 28b387e39e1016183a78                                                         
-Version: webpack 2.1.0-beta.15
-Time: 734ms
-            Asset     Size  Chunks             Chunk Names
-    ethjs-util.js  65.1 kB       0  [emitted]  main
-ethjs-util.js.map  79.3 kB       0  [emitted]  main
-    + 8 hidden modules
-
-Hash: 4d26e1d501227158f8ab                                                         
-Version: webpack 2.1.0-beta.15
-Time: 1523ms
-            Asset     Size  Chunks             Chunk Names
-ethjs-util.min.js  25.4 kB       0  [emitted]  main
-    + 8 hidden modules
-```
 
 ## Other Awesome Modules, Tools and Frameworks
 
