@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0]
+### Fixed
+- **BREAKING**: Add peerDependency @babel/runtime@^7.0.0 ([#14](https://github.com/MetaMask/ethjs-util/pull/14))
+- Upgrade babel from 6 to 7 ([#14](https://github.com/MetaMask/ethjs-util/pull/14))
+- Upgrade webpack from 2 to 3 ([#13](https://github.com/MetaMask/ethjs-util/pull/13))
+- Replace Buffer() with Buffer.from / Buffer.alloc ([#15](https://github.com/MetaMask/ethjs-util/pull/15))
+
 ## [0.2.0]
 ### Changed
 - **BREAKING**: Rename package from `ethjs-util` to `@metamask/ethjs-util`
@@ -82,7 +89,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - linting
   - basic exports
 
-[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/MetaMask/ethjs-util/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/MetaMask/ethjs-util/compare/v0.1.4...v0.1.5
