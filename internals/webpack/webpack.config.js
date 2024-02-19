@@ -2,28 +2,30 @@ const path = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-var env = process.env.NODE_ENV;   // eslint-disable-line
-var filename = 'ethjs-util';      // eslint-disable-line
-var library = 'ethUtil';          // eslint-disable-line
-var config = {                    // eslint-disable-line
+// TODO: temporary workaround for making webpack 4 work across Node.js versions
+// Remove once project upgraded to webpack 5
+// https://stackoverflow.com/questions/69394632/webpack-build-failing-with-err-ossl-evp-unsupported/69691525#69691525
+const crypto = require('crypto');
+
+const cryptoOrigCreateHash = crypto.createHash;
+crypto.createHash = (algorithm) => cryptoOrigCreateHash(algorithm === 'md4' ? 'sha256' : algorithm);
+
+const env = process.env.NODE_ENV;
+const filename = 'ethjs-util';
+const library = 'ethUtil';
+const config = {
   module: {
-    loaders: [
-      {
-        test: /\.json$/,
-        loader: ['json-loader'],
-      },
-    ],
   },
   devtool: 'cheap-module-source-map',
   output: {
     path: path.resolve(path.join(__dirname, '../../dist')),
     filename: filename + '.js',       // eslint-disable-line
-    library: library,                 // eslint-disable-line
+    library,
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
   plugins: [
-    new webpack.BannerPlugin({ banner: ' /* eslint-disable */ ', raw: true, entryOnly: true }),
+    new webpack.BannerPlugin({ banner: '/* eslint-disable */', raw: true, entryOnly: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
