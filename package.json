@@ -116,7 +116,7 @@
     "bignumber.js": "^9.1.2",
     "bn.js": "^5.2.1",
     "chai": "^4.3.10",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.3",
     "eslint": "^5.4.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-import-resolver-webpack": "^0.2.4",
