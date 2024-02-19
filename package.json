@@ -4,8 +4,7 @@
   ],
   "babel": {
     "env": {
-      "commonjs": {
-      }
+      "commonjs": {}
     }
   },
   "bugs": {
@@ -33,7 +32,6 @@
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.11.0",
     "@babel/register": "^7.0.0",
-    "babel-loader": "^8.0.0",
     "bignumber.js": "^9.1.2",
     "bn.js": "^5.2.1",
     "chai": "^4.4.1",
@@ -140,8 +138,8 @@
     "build": "npm run build:commonjs && npm run test:lib && npm run build:umd && npm run build:umd:min",
     "build:clean": "npm run test:clean && rimraf ./dist",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --copy-files",
-    "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack --config ./internals/webpack/webpack.config.js ./lib/index.js --progress",
-    "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack --config ./internals/webpack/webpack.config.js ./lib/index.js --progress",
+    "build:umd": "cross-env NODE_ENV=development webpack --config ./internals/webpack/webpack.config.js ./lib/index.js --progress",
+    "build:umd:min": "cross-env NODE_ENV=production webpack --config ./internals/webpack/webpack.config.js ./lib/index.js --progress",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern **/**.min.js",
     "lint:js": "npm run lint:eslint -- . ",
