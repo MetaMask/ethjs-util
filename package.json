@@ -94,6 +94,7 @@
       "no-console": 1,
       "max-len": 0,
       "prefer-template": 2,
+      "strict": 0,
       "no-use-before-define": 0,
       "newline-per-chained-call": 0,
       "arrow-body-style": [
