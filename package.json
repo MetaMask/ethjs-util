@@ -117,7 +117,7 @@
     "bn.js": "^5.2.1",
     "chai": "^4.4.1",
     "cross-env": "^7.0.3",
-    "eslint": "^5.4.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-import-resolver-webpack": "^0.2.4",
     "eslint-plugin-import": "^2.18.0",
