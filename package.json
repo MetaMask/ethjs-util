@@ -5,14 +5,6 @@
   "babel": {
     "env": {
       "commonjs": {
-        "plugins": [
-          [
-            "@babel/plugin-transform-modules-commonjs",
-            {
-              "loose": true
-            }
-          ]
-        ]
       }
     }
   },
@@ -40,7 +32,6 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.11.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.0",
     "bignumber.js": "^9.1.2",
