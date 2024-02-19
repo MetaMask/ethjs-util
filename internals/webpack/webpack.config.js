@@ -9,11 +9,6 @@ var config = {                    // eslint-disable-line
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loaders: ['babel-loader'],
-        exclude: /node_modules/,
-      },
-      {
         test: /\.json$/,
         loader: ['json-loader'],
       },
