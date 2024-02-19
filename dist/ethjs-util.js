@@ -100,8 +100,8 @@ module.exports = function isHexPrefixed(str) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(Buffer) {
 
-var isHexPrefixed = __webpack_require__(0);
-var stripHexPrefix = __webpack_require__(7);
+const isHexPrefixed = __webpack_require__(0);
+const stripHexPrefix = __webpack_require__(7);
 
 /**
  * Pads a `String` to have an even length
@@ -137,7 +137,7 @@ function intToHex(i) {
  * @return {Buffer}
  */
 function intToBuffer(i) {
-  var hex = intToHex(i);
+  const hex = intToHex(i);
   return Buffer.from(padToEven(hex.slice(2)), 'hex');
 }
 
@@ -169,9 +169,7 @@ function arrayContainsArray(superset, subset, some) {
   if (Array.isArray(subset) !== true) {
     throw new Error("[ethjs-util] method arrayContainsArray requires input 'subset' to be an array got type '" + typeof subset + "'");
   }
-  return subset[Boolean(some) && 'some' || 'every'](function (value) {
-    return superset.indexOf(value) >= 0;
-  });
+  return subset[Boolean(some) && 'some' || 'every'](value => superset.indexOf(value) >= 0);
 }
 
 /**
@@ -182,7 +180,7 @@ function arrayContainsArray(superset, subset, some) {
  * @returns {String} ascii string representation of hex value
  */
 function toUtf8(hex) {
-  var bufferValue = Buffer.from(padToEven(stripHexPrefix(hex).replace(/^0+|0+$/g, '')), 'hex');
+  const bufferValue = Buffer.from(padToEven(stripHexPrefix(hex).replace(/^0+|0+$/g, '')), 'hex');
   return bufferValue.toString('utf8');
 }
 
@@ -202,7 +200,7 @@ function toAscii(hex) {
     i = 2;
   }
   for (; i < l; i += 2) {
-    var code = parseInt(hex.substr(i, 2), 16);
+    const code = parseInt(hex.substr(i, 2), 16);
     str += String.fromCharCode(code);
   }
   return str;
@@ -217,7 +215,7 @@ function toAscii(hex) {
  * @returns {String} hex representation of input string
  */
 function fromUtf8(stringValue) {
-  var str = Buffer.from(stringValue, 'utf8');
+  const str = Buffer.from(stringValue, 'utf8');
   return "0x" + padToEven(str.toString('hex')).replace(/^0+|0+$/g, '');
 }
 
@@ -233,8 +231,8 @@ function fromAscii(stringValue) {
   var hex = ''; // eslint-disable-line
   for (var i = 0; i < stringValue.length; i++) {
     // eslint-disable-line
-    var code = stringValue.charCodeAt(i);
-    var n = code.toString(16);
+    const code = stringValue.charCodeAt(i);
+    const n = code.toString(16);
     hex += n.length < 2 ? "0" + n : n;
   }
   return "0x" + hex;
