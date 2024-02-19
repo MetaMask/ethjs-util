@@ -24,9 +24,6 @@
   },
   "deprecated": false,
   "description": "A simple set of Ethereum JS utilities.",
-  "peerDependencies": {
-    "@babel/runtime": "^7.0.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
