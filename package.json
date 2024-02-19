@@ -31,7 +31,6 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.11.0",
-    "@babel/register": "^7.0.0",
     "bignumber.js": "^9.1.2",
     "bn.js": "^5.2.1",
     "chai": "^4.4.1",
