@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // TODO: temporary workaround for making webpack 4 work across Node.js versions
 // Remove once project upgraded to webpack 5
@@ -16,10 +16,31 @@ const library = 'ethUtil';
 const config = {
   module: {
   },
-  devtool: 'cheap-module-source-map',
+  devtool: env === 'production'
+    ? false
+    : 'cheap-module-source-map',
+  optimization: env === 'production'
+    ? {
+      minimize: true,
+      minimizer: [new TerserPlugin({
+        sourceMap: false,
+        terserOptions: {
+          ecma: 6,
+          compress: {
+            pure_getters: true,
+            unsafe: true,
+            unsafe_comps: true,
+          },
+          ie8: false,
+          mangle: false,
+        },
+      })],
+    } : {},
   output: {
     path: path.resolve(path.join(__dirname, '../../dist')),
-    filename: filename + '.js',       // eslint-disable-line
+    filename: env === 'production'
+      ? filename + '.min.js'    // eslint-disable-line
+      : filename + '.js',       // eslint-disable-line
     library,
     libraryTarget: 'umd',
     umdNamedDefine: true,
@@ -32,20 +53,5 @@ const config = {
     }),
   ],
 };
-
-if (env === 'production') {
-  config.output.filename = filename + '.min.js'; // eslint-disable-line
-  config.plugins
-    .push(new UglifyJsPlugin({
-      uglifyOptions: {
-        compress: {
-          pure_getters: true,
-          unsafe: true,
-          unsafe_comps: true,
-        },
-        screw_ie8: true,
-      },
-    }));
-}
 
 module.exports = config;
