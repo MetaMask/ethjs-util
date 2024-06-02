@@ -3,68 +3,8 @@
     "Nick Dodson <nick.dodson@consensys.net>"
   ],
   "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-transform-template-literals",
-        {
-          "loose": true
-        }
-      ],
-      "@babel/plugin-transform-literals",
-      "@babel/plugin-transform-function-name",
-      "@babel/plugin-transform-arrow-functions",
-      "@babel/plugin-transform-block-scoped-functions",
-      [
-        "@babel/plugin-transform-classes",
-        {
-          "loose": true
-        }
-      ],
-      "@babel/plugin-transform-object-super",
-      "@babel/plugin-transform-shorthand-properties",
-      [
-        "@babel/plugin-transform-computed-properties",
-        {
-          "loose": true
-        }
-      ],
-      [
-        "@babel/plugin-transform-for-of",
-        {
-          "loose": true
-        }
-      ],
-      "@babel/plugin-transform-sticky-regex",
-      "@babel/plugin-transform-unicode-regex",
-      [
-        "@babel/plugin-transform-spread",
-        {
-          "loose": true
-        }
-      ],
-      "@babel/plugin-transform-parameters",
-      [
-        "@babel/plugin-transform-destructuring",
-        {
-          "loose": true
-        }
-      ],
-      "@babel/plugin-transform-block-scoping",
-      "@babel/plugin-transform-object-rest-spread",
-      "@babel/plugin-transform-member-expression-literals",
-      "@babel/plugin-transform-property-literals"
-    ],
     "env": {
-      "commonjs": {
-        "plugins": [
-          [
-            "@babel/plugin-transform-modules-commonjs",
-            {
-              "loose": true
-            }
-          ]
-        ]
-      }
+      "commonjs": {}
     }
   },
   "bugs": {
@@ -84,35 +24,10 @@
   },
   "deprecated": false,
   "description": "A simple set of Ethereum JS utilities.",
-  "peerDependencies": {
-    "@babel/runtime": "^7.0.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.11.0",
-    "@babel/plugin-transform-arrow-functions": "^7.0.0",
-    "@babel/plugin-transform-block-scoped-functions": "^7.0.0",
-    "@babel/plugin-transform-block-scoping": "^7.0.0",
-    "@babel/plugin-transform-classes": "^7.0.0",
-    "@babel/plugin-transform-computed-properties": "^7.0.0",
-    "@babel/plugin-transform-destructuring": "^7.0.0",
-    "@babel/plugin-transform-for-of": "^7.0.0",
-    "@babel/plugin-transform-function-name": "^7.0.0",
-    "@babel/plugin-transform-literals": "^7.0.0",
-    "@babel/plugin-transform-member-expression-literals": "^7.0.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
-    "@babel/plugin-transform-object-rest-spread": "^7.0.0",
-    "@babel/plugin-transform-object-super": "^7.0.0",
-    "@babel/plugin-transform-parameters": "^7.0.0",
-    "@babel/plugin-transform-property-literals": "^7.0.0",
-    "@babel/plugin-transform-shorthand-properties": "^7.0.0",
-    "@babel/plugin-transform-spread": "^7.0.0",
-    "@babel/plugin-transform-sticky-regex": "^7.0.0",
-    "@babel/plugin-transform-template-literals": "^7.0.0",
-    "@babel/plugin-transform-unicode-regex": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "babel-loader": "^8.0.0",
     "bignumber.js": "^9.1.2",
     "bn.js": "^5.2.1",
     "chai": "^4.4.1",
@@ -125,11 +40,12 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.6.0",
     "istanbul": "^0.4.5",
-    "json-loader": "^0.5.7",
     "mocha": "^8.4.0",
     "pre-commit": "^1.2.2",
     "rimraf": "^3.0.2",
-    "webpack": "^3.12.0"
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack": "^4.47.0",
+    "webpack-cli": "^4.10.0"
   },
   "engines": {
     "node": "^10.19 || ^12.22 || ^16.20 || ^18.18 || >=20",
@@ -178,6 +94,7 @@
       "no-console": 1,
       "max-len": 0,
       "prefer-template": 2,
+      "strict": 0,
       "no-use-before-define": 0,
       "newline-per-chained-call": 0,
       "arrow-body-style": [
@@ -218,8 +135,8 @@
     "build": "npm run build:commonjs && npm run test:lib && npm run build:umd && npm run build:umd:min",
     "build:clean": "npm run test:clean && rimraf ./dist",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --copy-files",
-    "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack --config ./internals/webpack/webpack.config.js ./lib/index.js --progress",
-    "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack --config ./internals/webpack/webpack.config.js ./lib/index.js --progress",
+    "build:umd": "cross-env NODE_ENV=development webpack ./lib/index.js --config ./internals/webpack/webpack.config.js --progress",
+    "build:umd:min": "cross-env NODE_ENV=production webpack ./lib/index.js --config ./internals/webpack/webpack.config.js --progress",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern **/**.min.js",
     "lint:js": "npm run lint:eslint -- . ",
