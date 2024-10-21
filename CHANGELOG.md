@@ -7,10 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.4.0]
-### Uncategorized
-- Enabling MetaMask security code scanner ([#23](https://github.com/MetaMask/ethjs-util/pull/23))
-- BREAKING: increase minimum node version to v10 ([#20](https://github.com/MetaMask/ethjs-util/pull/20))
-- ci: run build and test on newer node version; lint only on 12
+### Changed
+- **BREAKING**: Increase minimum node version to v10 ([#20](https://github.com/MetaMask/ethjs-util/pull/20))
 
 ## [0.3.0]
 ### Fixed
