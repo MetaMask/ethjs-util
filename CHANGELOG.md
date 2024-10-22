@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0]
+### Changed
+- **BREAKING**: Increase minimum node version to v10 ([#20](https://github.com/MetaMask/ethjs-util/pull/20))
+
 ## [0.3.0]
 ### Fixed
 - **BREAKING**: Add peerDependency @babel/runtime@^7.0.0 ([#14](https://github.com/MetaMask/ethjs-util/pull/14))
@@ -89,7 +93,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - linting
   - basic exports
 
-[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-util/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/MetaMask/ethjs-util/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/MetaMask/ethjs-util/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/MetaMask/ethjs-util/compare/v0.1.6...v0.2.0
 [0.1.6]: https://github.com/MetaMask/ethjs-util/compare/v0.1.5...v0.1.6
